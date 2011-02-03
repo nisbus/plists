@@ -1,0 +1,11 @@
+{application, plists,
+ [
+  {description, "plists is a drop-in replacement for module lists"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.
