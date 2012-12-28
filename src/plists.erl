@@ -432,10 +432,11 @@ mapreduce(MapFunc, List, MapMalt) ->
 %
 % mapreduce requires OTP R11B, or it may leave monitoring messages in the
 % message queue.
-% @spec (MapFunc, List, InitState, ReduceFunc, MapMalt) -> Dict
+% @end
+% spec (MapFunc, List, InitState, ReduceFunc, MapMalt) -> Dict
 % MapFunc = (term()) -> DeepListOfKeyValuePairs
 % DeepListOfKeyValuePairs = [DeepListOfKeyValuePairs] | {Key, Value}
-% ReduceFunc = (OldState::term(), Key::term(), Value::term() -> NewState::term()
+% ReduceFunc = (OldState :: term(), Key :: term(), Value :: term()) -> NewState::term()
 mapreduce(MapFunc, List, InitState, ReduceFunc, MapMalt) ->
     Parent = self(),
     {Reducer, ReducerRef} =
